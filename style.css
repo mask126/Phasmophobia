@@ -154,7 +154,7 @@ footer {
     transition: 0.3s;
     margin: 75px 0 0 0;
 }
-.btn:hover{
+.btn1:hover{
     transform: scale(1.06);
     transition: 0.4s;
 }
