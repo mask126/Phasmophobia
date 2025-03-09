@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phasmophobia - Проклятые предметы</title>
+    <link rel="stylesheet" href="style.css">
+</head><header>
+
+    <nav class="navig">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Логотип">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="ghost.html">Призраки</a></li>
+            <li><a href="items.html">Предметы</a></li>
+            <li><a href="map.html">Карты</a></li>
+            <li><a href="cursed objects.html">Проклятые предметы</a></li>
+            <li><a href="contacts.html" class="contact">Контакты</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+<body>
+
+
+    <section class="object">
+            <div class="object-start">
+                
+
+            <h2>Проклятые предметы</h2>
+            <p>
+                Проклятые предметы (англ. Cursed Possesions) — это предметы, которые используются для взаимодействия с призраком или вызывают его появление.
+                Шесть из семи возможных проклятых предметов можно подобрать и использовать в любое время, находясь внутри здания (за пределами локации предмет работать не будет), тогда как круг призыва привязан к одному заранее определённому месту на карте.
+                Оставшиеся шесть предметов, которые можно подобрать, подобно штативу, требуют, чтобы игрок не держал предмет при их подборе, и если игрок переключается на другой предмет, он выронит проклятый предмет из рук. В одной игре на карте может существовать только один случайный проклятый предмет.
+                В определённых сложностях проклятые предметы могут появляться по-разному:
+
+                <ul>
+                    <li>
+                        Специальная сложность: можно настроить их количество и выбрать какой именно будет проклятый предмет, но это понизит награду в завершении контракта.
+                    </li>
+                    <li>
+                        Особая сложность: в зависимости от задания появление проклятого предмета может быть особенным.
+                    </li>
+                    <li>
+                        Безумие: отсутствует проклятый предмет.
+                    </li>
+                </ul>
+            <p>
+                У каждого предмета есть одно специальное место появления на карте. На больших картах область появления проклятых предметов ограничена, и их можно найти недалеко от входа.
+
+                Обычно проклятые предметы могут сильно помочь в определении призрака и получении снимков, однако их использование влечёт за собой ощутимые последствия. Они, как правило, связаны со значительным снижением рассудка.
+                При неосторожном использовании всегда есть риск вызвать проклятую охоту, которая длится дольше обычной.
+                Распятие III класса способно остановить проклятую охоту, I и II класс — нет. Также эффект блокирования охоты от благовония обнулится. Последующие обычные охоты до конца контракта по длительности будут как проклятые, но уже могут быть остановлены распятием, и будет работать эффект блокирования охоты с помощью благовония.
+                Активация или использование проклятого предмета немедленно отменит фазу подготовки.
+            </p>
+            
+
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <a href="cursed-objects-page/desk.html">
+                        <img src="images/desk.jpg" alt="Слайд 1">
+                    </a>
+                    </div>
+                    <div class="slide">
+                        <a href="cursed-objects-page/voodoo.html">
+                        <img src="images/vudu.jpg" alt="Слайд 2">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="cursed-objects-page/mirror.html">
+                        <img src="images/mirror.jpg" alt="Слайд 3">
+                        </a>
+                    </div>
+                    <div class="slide"> 
+                        <a href="cursed-objects-page/taro.html">
+                        <img src="images/card.jpg" alt="Слайд 4">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="cursed-objects-page/circle.html">
+                        <img src="images/circle.jpg" alt="Слайд 5">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="cursed-objects-page/skat.html">
+                        <img src="images/skat.jpg" alt="Слайд 6">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="cursed-objects-page/lapka.html">
+                        <img src="images/lapka.jpg" alt="Слайд 7">
+                        </a>
+                    </div>
+                </div>
+                <div class="prev-button">&#10094;</div>
+                <div class="next-button">&#10095;</div>
+                <div class="dots"></div>
+            </div> 
+            </div>
+    </section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.dots');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+
+    slides.forEach((slide, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) {
+            dot.classList.add('active'); // Активная точка для первого слайда
+        }
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        currentSlide = (n + slides.length) % slides.length; // Зацикливание
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    // Кнопки переключения слайдов
+    prevButton.addEventListener('click', function() {
+        showSlide(currentSlide - 1);
+    });
+
+    nextButton.addEventListener('click', function() {
+        showSlide(currentSlide + 1);
+    });
+
+    // Автопереключение слайдов
+    let autoSlideInterval = setInterval(function() {
+        showSlide(currentSlide + 1);
+    }, 5000);
+
+    slider.addEventListener('mouseover', function() {
+        clearInterval(autoSlideInterval);
+    });
+
+    slider.addEventListener('mouseout', function() {
+        autoSlideInterval = setInterval(function() {
+            showSlide(currentSlide + 1);
+        }, 5000);
+    });
+});
+
+
+</script>
+<footer>
+    <p>&copy; 2024 Phasmophobia. Все права защищены.</p>
+</footer>
+</body>
+</html>

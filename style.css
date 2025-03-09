@@ -1,0 +1,1280 @@
+@charset "UTF-8";
+
+/*страница, шапка и подвал*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bahnschrift', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: #393939;
+    height: 65px;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 100px;
+    margin-left: 10%;
+}
+.logo img {
+    width: 160px;
+    height: auto;
+    padding: 5% 0 0 0;
+}
+
+/* Навигация */
+.navig {
+    
+    display: flex;
+    justify-content: start;
+    flex-grow: 1;
+    padding: 0 0;
+    margin: 0 100px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 5px 15px;
+
+}
+
+nav ul li a:hover {
+    color: #2e779e;
+    transition: 0.7s;
+}
+
+.contact {
+    border-radius: 20px;
+    padding: 5px 20px;
+    transition: 0.7s;
+    margin-left: 60px;
+    position: relative;
+    width: 120px;
+    display: flex;
+    justify-content: center;    
+    background-color: #282828;
+
+}
+
+.contact:hover {
+transform: scale(1.1);
+    position: relative;
+    transition: 0.4s;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #393939;
+    color: #ffffff;
+    font-size: 14px;
+}
+/*Главная страница*/
+.back-img {
+    background-image: url(images/123.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.hero {
+    z-index: 5;
+    }
+
+
+.hero h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.btn1{
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 0.3s;
+    margin: 75px 0 0 0;
+}
+.btn1:hover{
+    transform: scale(1.06);
+    transition: 0.4s;
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #333;
+    background: linear-gradient(to top, #161616 , #333 90% );
+}
+
+.feature {
+    text-align: center;
+    max-width: 300px;
+}
+
+    .feature h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .feature p {
+        font-size: 16px;
+        color: #cccccc;
+    }
+    .partners{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 70px 0 0 0 ;
+        padding: 0 0 150px 0;
+    }
+    .partnerstext{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+
+    }
+    .partnerstext h3{
+        font-size: 50px;
+    }
+    .partnerstext p{
+        font-size: 20px;
+    }
+    .youtuber{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin: 40px 0 0 0;
+        align-items: center;
+    }
+    .youtuber img{
+      width: 200px;
+      border-radius: 100px;
+      margin: 0 0 0 100px;
+      object-fit: cover;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        margin: 0 100px 0 20px;
+        align-items: flex-start;
+    }
+    .info h3{
+        display: flex;
+        height: 65px;
+        font-size: 50px;
+    }
+    .info p{
+        display: flex;
+        font-size: 20px;
+
+    }
+    .channel-link{
+        text-decoration: none;
+        color: #ccc;
+    }
+
+/*список призраков*/
+.ghosts {
+    height: 260vh;
+    padding: 50px 20px;
+    background-color: #282828;
+}
+
+    .ghosts h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+
+.ghost-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ghost-card {
+    background-color: #333;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: 0.7s;
+}
+
+    .ghost-card:hover {
+        transform: scale(1.04);
+        background-color: rgb(46, 119, 158);
+        transition: 0.7s;
+        box-shadow: 0px 0px 50px rgba(46, 119, 212, 0.8);
+    }
+    .ghost-card a {
+        text-decoration: none;
+         color: inherit;
+    }
+    .ghost-card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        position:relative;
+        opacity:1;
+        transition: opacity 0.3s;
+    }
+    
+
+    .ghost-card p {
+        font-size: 16px;
+        color: #cccccc;
+    }
+/*карты */
+.map {
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #282828;
+}
+.map-start {
+    width: 76%;
+    font-size: 25px;
+}
+.map-section {
+    background-color: #1a1a1a;
+    padding: 50px 20px;
+}
+
+    .map-section h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+
+.map-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   
+}
+
+.map-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.7s, transform 0.3s;
+    position: relative;
+    transition: 0.7s;
+}
+    .map-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .map-card p {
+        font-size: 16px;
+        color: #cccccc;
+    }
+
+    .map-card:hover {
+        background-color: #2e779e;
+        transition: 0.7s;
+        transform: scale(1.04);
+        box-shadow: 0px 0px 50px rgba(46, 119, 212, 0.8);
+    }
+    .map-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+/*снаряга*/
+.item {
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #282828;
+}
+.items-start {
+    width: 900px;
+    font-size: 25px;
+}
+.equipment-section {
+    background-color: #1a1a1a;
+    padding: 50px 20px;
+}
+
+    .equipment-section h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+
+.equipment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   
+}
+
+.equipment-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.7s, transform 0.3s;
+    position: relative;
+    transition: 0.7s;
+}
+
+    .equipment-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .equipment-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .equipment-card p {
+        font-size: 16px;
+        color: #cccccc;
+    }
+
+    .equipment-card:hover {
+        background-color: #2e779e;
+        transition: 0.7s;
+        transform: scale(1.04);
+        box-shadow: 0px 0px 50px rgba(46, 119, 212, 0.8);
+    }
+    .equipment-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+/*Проклятые предметы*/
+.object {
+    display: flex;
+    justify-content: center;    
+    color: #ffffff;
+    background-color: #282828;
+}
+.object-start {
+    width: 80%;
+    height: 100%;
+    margin-top: 2%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(14, 0, 41, 0.5);
+    color: #cccccc;
+    margin-bottom: 2%;
+    z-index: 1;
+}
+    .object-start ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: circle;
+    }
+        .object-start ul li {
+            margin-bottom: 8px;
+        }
+
+    .object-start h2 {
+        text-align: center;
+        font-size: 30px
+    }
+    .object-start p {
+        font-size: 16px;
+        color: #cccccc;
+        margin-bottom: 15px;
+        line-height: 1.8;
+        margin-top: 10px;
+        text-align: right;
+        text-align: justify;
+    }
+    .slider {
+        position: relative;
+        width: 80%;
+        margin: 40px auto 2% auto ;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    .slides {
+        height: 100%;
+        position: relative;
+        
+    }
+    
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        pointer-events: none;
+        
+    }
+    
+    .slide.active {
+        opacity: 3;
+        pointer-events: auto;
+    }
+    
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        border-radius: 25px;
+    }
+    .prev-button {
+        display: none;
+        position: absolute;
+        width: 40px; 
+        height: 40px; 
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        user-select: none;
+        transition: all 0.3s ease;
+        padding:  5px 10px 0 13px;
+    }
+    .next-button{
+        display: none;
+        position: absolute;
+        width: 40px; 
+        height: 40px; 
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        user-select: none;
+        transition: all 0.3s ease;
+        padding:  5px 10px 0 15px;
+    }
+    
+    
+    .prev-button { left: 10px; }
+    .next-button { right: 10px; }
+    
+    .prev-button:hover, .next-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        
+    }
+    
+    .dot {
+        width: 30px;
+        height: 15px;
+        border-radius: 25%;
+        background-color: #ccc;
+        display: inline-block;
+        margin: 0 5px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .dot.active {
+        background-color: #2e779e;
+    }
+    .dot:hover{
+        background-color: #636363;
+    }
+
+    /*Контакты*/
+    .con {
+        text-align: center;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        background-color: #282828;
+    }
+    .con-start {
+        width: 76%;
+        font-size: 25px;
+    }
+    .con-section {
+        background-color: #1a1a1a;
+        padding: 50px 20px;
+    }
+    
+        .con-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #ffffff;
+        }
+        .con-section p {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #ccc;
+            transition: 0.3;
+        }
+
+        .con-section a{
+            text-decoration: none;
+            transition: 0.3s;
+        }    
+    .con-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+.btn{
+    width: 30vw;
+    height: 9vh;
+    margin: 20px auto;
+    background-color: #303030;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+    flex-grow: 1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+    }
+    .btn a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    }
+    .btn img{
+    width: 30px;
+    height: 30px;
+    }
+    .btn p{
+    margin: 0px 20px 0 0px;
+    text-align: center;
+    flex-grow: 1;
+    }
+    .btn:hover{
+    background: linear-gradient(120deg,#2e779e, #c0dafdcc);
+    transition: 0.7s;
+    transform: scale(1.04);
+    box-shadow: 0px 0px 50px rgba(46, 119, 212, 0.8);
+    }
+
+    @media (min-width: 1440px) and (max-width: 1919px){
+        .logo img {
+            width: 140px;
+            margin-right: 10px;
+        }
+        .logo{
+            margin:  0 10px 0 14%; 
+        }
+        .navig{
+            margin: 0 45px;
+            width: 200px;
+            
+        }
+        nav ul {
+            gap: 10px;
+            flex-grow: 0;
+        }   
+        .contact {
+            margin-left: 20px;
+        }
+    }
+    @media (min-width: 1152px) and (max-width: 1439px){
+        .logo img {
+            width: 120px;
+            margin-right: 10px;
+        }
+        .logo{
+            margin:  0 10px 0 0; 
+        }
+        .navig{
+            margin: 0 5% 0 15%;
+            width: 200px;
+            
+        }
+        nav ul {
+            gap: 10px;
+            flex-grow: 0;
+        }   
+        .contact {
+            margin-left: 20px;
+        }
+        .features, .ghost-list, .map-list, .equipment-list {
+            flex-wrap: wrap;
+        }
+        .btn p{
+            font-size: 18px;
+        }
+        .youtuber img{
+            width: 100px;
+          }
+        .info p{
+            font-size: 15px;
+        }
+        .info h3{
+            font-size: 40px;
+            height: 50px;
+        }
+        .back-img{
+            width: 100%;
+            height: 75vh;
+        }
+        .hero h2{
+            font-size: 40px;
+        }
+        .hero p{
+            font-size: 20px;
+            margin: 0 20px;
+        }
+        .btn1{
+            margin-top: 20px;
+            font-size: 15px;
+            padding: 10px 25px;
+        }
+        .ghosts{
+            height: 100%;
+        }
+        .ghost-card{
+            width: 250px;
+            height: auto;
+           
+        }
+        .con-list{
+            flex-direction: row;
+            margin: 0;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 50px 0 0 ;
+        }
+        .con-list > *{
+            flex-basis: 50%;
+            box-sizing: border-box;
+        }
+        .con-list h2{
+            font-size: 30px;
+            height: 40px;
+        }
+        .btn{
+            margin: 0 0 20px 0 ;
+            width: 20vw;
+        }
+    }
+    @media (min-width: 1024px) and (max-width: 1151px){
+        .logo img {
+            width: 140px;
+            margin-right: 10px;
+        }
+        .logo{
+            margin:  0 10px 0 0; 
+        }
+        .navig{
+            margin: 0 45px;
+            width: 200px;
+        }
+        nav ul {
+            gap: 10px;
+            flex-grow: 0;
+        }
+        .contact {
+            margin-left: 20px;
+        }
+        .features, .ghost-list, .map-list, .equipment-list {
+            flex-wrap: wrap;
+        }
+        .btn p{
+            font-size: 18px;
+        }
+        .youtuber img{
+            width: 100px;
+          }
+        .info p{
+            font-size: 15px;
+        }
+        .info h3{
+            font-size: 40px;
+            height: 50px;
+        }
+        .back-img{
+            width: 100%;
+            height: 75vh;
+        }
+        .hero h2{
+            font-size: 40px;
+        }
+        .hero p{
+            font-size: 20px;
+            margin: 0 20px;
+        }
+        .btn1{
+            margin-top: 20px;
+            font-size: 15px;
+            padding: 10px 25px;
+        }
+        .ghosts{
+            height: 100%;
+        }
+        .ghost-card{
+            width: 250px;
+            height: auto;
+           
+        }
+        .con-list{
+            flex-direction: row;
+            margin: 0;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 50px 0 0 ;
+        }
+        .con-list > *{
+            flex-basis: 50%;
+            box-sizing: border-box;
+        }
+        .con-list h2{
+            font-size: 30px;
+            height: 40px;
+        }
+        .btn{
+            margin: 0 0 20px 0 ;
+            width: 20vw;
+        }
+
+    }
+    @media (min-width: 800px) and (max-width: 1023px){
+        .logo img {
+            width: 100px;
+        }
+        .logo{
+            margin:  0; 
+        }
+        .navig{
+            margin: 0 45px;
+            width: 200px;
+        }
+        nav ul {
+            gap: 0px;
+
+        }
+        nav ul li a {
+            font-size: 12px;
+        }
+        .contact {
+            margin-left: 20px;
+            width: 100px;
+        }
+        .hero h2 {
+            font-size: 30px;
+        }
+        .hero p {
+            font-size: 18px;
+        }
+        .btn1 {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .features, .partners, .map, .equipment-section, .con-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+        }
+        .partners{
+            padding: 0 0 50px 0;
+        }
+        .partners h3{
+            font-size: 36px;
+        }
+        .features{
+            gap: 30px;
+        }
+        .youtuber {
+            flex-direction: column;
+            align-items: center;
+        }
+        .info h3{
+            font-size: 20px;
+        }
+        .info p{
+            font-size: 15px;
+        }
+        .youtuber img{
+            width: 150px;
+            margin: 0;
+        }
+        .info{
+            margin: 0;
+        }
+        .info h3{
+            margin: 0;
+        }
+        .info p{
+            margin:  0 0 20px 0;
+
+        }
+        .item{
+            padding:0 20px ;
+        }
+        .item h2, .map h1{
+            font-size: 30px;
+        }
+        .item p, .map p{
+            font-size: 20px;
+        }
+        .equipment-card img{
+            height:auto ;
+            width: 150px;
+        }
+        .dots{
+            height: 45%;
+        }
+        .dot{
+            width: 20px;
+            height: 15px;
+        }
+        .ghosts{
+            height: 100%;
+        }
+        .slider img{
+            height: 60%;
+        }
+        .prev-button{
+            display: none;
+        }
+        .next-button{
+            display: none;
+        }
+        .con-list{
+            flex-direction: row;
+            margin: 0;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 50px 0 0 ;
+        }
+        .con-list > *{
+            flex-basis: 50%;
+            box-sizing: border-box;
+        }
+        .con-list h2{
+            font-size: 30px;
+            height: 40px;
+        }
+        .btn{
+            margin: 0 0 20px 0 ;
+            width: 20vw;
+        }
+        .prev-button, .next-button{
+            display: none;
+        }
+    
+    }
+    @media (min-width: 600px) and (max-width: 799px){
+        header {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 0;
+        }
+        .logo img {
+            width: 160px;
+        }
+        .logo{
+            margin:  0; 
+        }
+        .navig {
+            width: 100%;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+        nav ul li {
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+        }
+        .contact{
+            justify-self: center;
+            margin-right: 10%;
+        }
+        .hero h2 {
+            font-size: 30px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 0 2%;
+        }
+        .btn1 {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .features, .partners, .map, .equipment-section, .con-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+        }
+        .partners{
+            padding: 0 0 50px 0;
+        }
+        .partners h3{
+            font-size: 36px;
+        }
+        .features{
+            gap: 30px;
+        }
+        .youtuber {
+            flex-direction: column;
+            align-items: center;
+        }
+        .info h3{
+            font-size: 20px;
+        }
+        .info p{
+            font-size: 15px;
+        }
+        .youtuber img{
+            width: 150px;
+            margin: 0;
+        }
+        .info{
+            margin: 0;
+        }
+        .info h3{
+            margin: 0;
+        }
+        .info p{
+            margin:  0 0 20px 0;
+
+        }
+        .item{
+            padding:0 20px ;
+        }
+        .item h2, .map h1{
+            font-size: 30px;
+        }
+        .item p, .map p{
+            font-size: 20px;
+        }
+        .equipment-card img{
+            height:auto ;
+            width: 150px;
+        }
+        .dots{
+            display: none;
+        }
+        .dot{
+            width: 20px;
+            height: 15px;
+        }
+        .ghosts{
+            height: 100%;
+        }
+        .slider img{
+            height: 60%;
+        }
+        .prev-button{
+            display: none;
+        }
+        .next-button{
+            display: none;
+        }
+        .con-list{
+            flex-direction: row;
+            margin: 0;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 50px 0 0 ;
+        }
+        .con-list > *{
+            flex-basis: 50%;
+            box-sizing: border-box;
+        }
+        .con-list h2{
+            font-size: 30px;
+            height: 40px;
+        }
+        .btn{
+            margin: 0 0 20px 0 ;
+            width: 20vw;
+        }
+        .btn p{
+            font-size: 15px;
+        }
+        .ghost-card, .equipment-card, .map-card{
+            width: 70%;
+        }
+        .prev-button, .next-button {
+            -webkit-tap-highlight-color: transparent;
+            display: block;
+            bottom: 10px;
+            top: auto;
+        }
+        .prev-button { left: 30%;  top: 65%;}
+        .next-button { right: 30%; top: 65%;}
+
+    }
+    @media (min-width: 320px) and (max-width: 599px){
+        header {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 0;
+        }
+        .logo img {
+            width: 140px;
+        }
+        .logo{
+            margin:  0; 
+        }
+        .navig {
+            width: 100%;
+            justify-content: center;
+            margin: 10px 0;
+            flex-direction: column;
+        }
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+        nav ul li {
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+        }
+        .contact{
+            justify-self: center;
+            margin: 0 16%;
+        }
+        .hero h2 {
+            font-size: 30px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 0 2%;
+        }
+        .btn1 {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .features, .partners, .map, .equipment-section, .con-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+        }
+        .partners{
+            padding: 0 0 50px 0;
+        }
+        .partners h3{
+            font-size: 36px;
+
+        }
+        .features{
+            gap: 30px;
+        }
+        .youtuber {
+            flex-direction: column;
+            align-items: center;
+        }
+        .info h3{
+            font-size: 20px;
+        }
+        .info p{
+            font-size: 15px;
+        }
+        .youtuber img{
+            width: 150px;
+            margin: 0;
+        }
+        .info{
+            margin: 0;
+        }
+        .info h3{
+            margin: 0;
+            height: 25px;
+        }
+        .info p{
+            margin:  0 0 20px 0;
+
+        }
+        .item{
+            padding:0 20px ;
+        }
+        .item h2, .map h1{
+            font-size: 25px;
+        }
+        .item p, .map p{
+            font-size: 16px;
+        }
+        .equipment-card img{
+            height:auto ;
+            width: 150px;
+        }
+        .dots{
+            display: none;
+        }
+        .dot{
+            width: 20px;
+            height: 15px;
+        }
+        .ghosts{
+            height: 100%;
+        }
+        .slider img{
+            height: 30%;
+        }
+        .con h1{
+            font-size: 25px;
+        }
+        .con p {
+            font-size: 16px;
+        }
+        .con-list{
+            flex-direction: row;
+            margin: 0;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 ;
+        }
+        .con-list > *{
+            flex-basis: 100%;
+            box-sizing: border-box;
+        }
+        .con-list h2{
+            font-size: 25px;
+            height: 40px;
+        }
+        .btn{
+            margin: 0 0 20px 0 ;
+            width: 20vw;
+        }
+        .btn p{
+            font-size: 16px;
+        }
+        .ghost-card, .equipment-card, .map-card{
+            width: 70%;
+        }
+        .prev-button, .next-button {
+            -webkit-tap-highlight-color: transparent;
+            display: block;
+            bottom: 10px;
+            top: auto;
+        }
+        .prev-button { left: 20%;  top: 35%;}
+        .next-button { right: 20%; top: 35%;}
+        footer {
+            font-size: 10px;
+        }
+
+    }
+    
