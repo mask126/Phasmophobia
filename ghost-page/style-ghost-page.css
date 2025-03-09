@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bahnschrift', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: #393939;
+    height: 65px;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 100px
+}
+.logo img {
+    width: 160px;
+    height: auto;
+    padding: 5% 0 0 0;
+}
+
+/* Навигация */
+.navig {
+    display: flex;
+    justify-content: start;
+    flex-grow: 1;
+    padding: 0 0;
+    margin: 0 100px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 5px 15px;
+
+}
+
+nav ul li a:hover {
+    color: #4cc8d4;
+    transition: 0.7s;
+}
+
+.contact {
+    border-radius: 20px;
+    padding: 5px 20px;
+    transition: 0.7s;
+    margin-left: 60px;
+    position: relative;
+    width: 120px;
+    display: flex;
+    justify-content: center;    
+    background-color: #282828;
+
+}
+
+.contact:hover {
+transform: scale(1.1);
+    position: relative;
+    transition: 0.4s;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #393939;
+    color: #ffffff;
+    font-size: 14px;
+}
+/*�������� ��� � ��������� */
+.content {
+    padding: 40px 20px;
+    max-width: 60%;
+    margin: auto;
+    flex:1; 
+}
+
+.ghost-info {
+    background-color: #282828;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+    .ghost-info h1 {
+        font-size: 36px;
+        color: #4cc8d4;
+        text-align: center;
+        margin-bottom: 7px;
+
+        
+    }
+
+    .ghost-info p {
+        font-size: 16px;
+        color: #cccccc;
+        margin-bottom: 15px;
+        line-height: 1.8;
+        margin-top: 10px;
+        text-align: right;
+        text-align: justify;
+    }
+
+img {
+    width: 35%;
+    display:flex;
+    margin: auto;
+}
+@media (min-width: 1440px) and (max-width: 1919px){
+    .logo img {
+        width: 140px;
+        margin-right: 10px;
+    }
+    .logo{
+        margin:  0 10px 0 14%; 
+    }
+    .navig{
+        margin: 0 45px;
+        width: 200px;
+        
+    }
+    nav ul {
+        gap: 10px;
+        flex-grow: 0;
+    }   
+    .contact {
+        margin-left: 20px;
+    }
+}
+@media (min-width: 1152px) and (max-width: 1439px){
+    .logo img {
+        width: 120px;
+        margin-right: 10px;
+    }
+    .logo{
+        margin:  0 10px 0 0; 
+    }
+    .navig{
+        margin: 0 5% 0 15%;
+        width: 200px;
+        
+    }
+    nav ul {
+        gap: 10px;
+        flex-grow: 0;
+    }   
+    .contact {
+        margin-left: 20px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1151px){
+    .logo img {
+        width: 140px;
+        margin-right: 10px;
+    }
+    .logo{
+        margin:  0 10px 0 0; 
+    }
+    .navig{
+        margin: 0 45px;
+        width: 200px;
+    }
+    nav ul {
+        gap: 10px;
+        flex-grow: 0;
+    }
+    .contact {
+        margin-left: 20px;
+    }
+    img{
+        width: 30;
+    }
+}
+@media (min-width: 800px) and (max-width: 1023px){
+    .logo img {
+        width: 100px;
+    }
+    .logo{
+        margin:  0; 
+    }
+    .navig{
+        margin: 0 45px;
+        width: 200px;
+    }
+    nav ul {
+        gap: 0px;
+
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+    .contact {
+        margin-left: 20px;
+        width: 100px;
+    }
+}
+@media (min-width: 600px) and (max-width: 799px){
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .logo img {
+        width: 160px;
+    }
+    .logo{
+        margin:  0; 
+    }
+    .navig {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+    .contact{
+        justify-self: center;
+        margin-right: 10%;
+    }
+    .ghost-info h1{
+        font-size: 24px;
+    }
+}
+@media (min-width: 320px) and (max-width: 599px){
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .logo img {
+        width: 140px;
+    }
+    .logo{
+        margin:  0; 
+    }
+    .navig {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+    .contact{
+        justify-self: center;
+        margin: 0 16%;
+    }
+    .ghost-info h1{
+        font-size: 20px;
+    }
+    .content{
+        justify-content: center;
+        margin: 0;
+        max-width: 100%;
+    }
+    .ghost-info p{
+       font-size: 12px;
+    }
+    footer {
+        font-size: 10px;
+    }
+}
